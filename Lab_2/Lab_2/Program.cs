@@ -12,12 +12,12 @@ namespace Lab_2
 
             do
             {
-                int length, width;
+                float length, width;
                 while (true) {
                     try
                     {
                         Console.Write("Enter Length: ");
-                        length = int.Parse(Console.ReadLine());
+                        length = float.Parse(Console.ReadLine());
 
                         break;
                     }
@@ -31,7 +31,7 @@ namespace Lab_2
                     try
                     {
                         Console.Write("Enter width: ");
-                        width = int.Parse(Console.ReadLine());
+                        width = float.Parse(Console.ReadLine());
 
                         break;
                     }
@@ -41,7 +41,7 @@ namespace Lab_2
                     }
                 }
 
-                Console.WriteLine("\nPerimeter: " + (width + length));
+                Console.WriteLine("\nPerimeter: " + (2*(width + length)));
 
                 Console.WriteLine("Area: " + (width * length));
 
