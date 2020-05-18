@@ -6,20 +6,23 @@ namespace Bonus_13
     {
         public string WeaponType { get; set; }
 
-        public Warrior(string name, int strength, string weaponType)
+        public Warrior(string name, int strength, int intelligence, string weaponType): base(name, strength, intelligence)
         {
             Name = "Warrior - " + name;
             Strength = strength;
-            Intelligence = 60;
+            Intelligence = intelligence;
             WeaponType = weaponType;
         }
 
         public override void Play()
         {
-            Console.WriteLine($"Character: {Name}");
-            Console.WriteLine($"Strength: {Strength}");
-            Console.WriteLine($"Intelligence: {Intelligence}");
+            base.Play();
             Console.WriteLine($"Weapon Type: {WeaponType}");
+        }
+
+        public override void move(int x, int y)
+        {
+
         }
     }
 }

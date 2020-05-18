@@ -2,26 +2,27 @@
 
 namespace Bonus_13
 {
-    internal class Wizard : MagicUsingCharacter
+    public class Wizard : MagicUsingCharacter
     {
         public int SpellNumber { get; set; }
 
-        public Wizard(string name, int strength, int magicalEnergy)
+        public Wizard(string name, int strength, int intelligence) : base(name, strength, intelligence)
         {
             Name = "Wizzard - " + name;
             Strength = strength;
             Intelligence = 100;
-            MagicalEnergy = magicalEnergy;
+            MagicalEnergy = 90;
             SpellNumber = 70;
 
         }
         public override void Play()
         {
-            Console.WriteLine($"Character: {Name}");
-            Console.WriteLine($"Strength: {Strength}");
-            Console.WriteLine($"Intelligence: {Intelligence}");
-            Console.WriteLine($"Magical Energy: {MagicalEnergy}");
+            base.Play();
             Console.WriteLine($"Spell Number: {SpellNumber}");
+        }
+        public override void move(int x, int y)
+        {
+
         }
     }
 }

@@ -2,18 +2,18 @@
 
 namespace Bonus_13
 {
-    public class GameCharacter
+    public abstract class GameCharacter
     {
         public string Name { get; set; }
         public int Strength { get; set; }
         public int Intelligence { get; set; }
 
 
-        public GameCharacter()
+        public GameCharacter(string name, int strength, int intelligence)
         {
-            Name = "Default Character";
-            Strength = 50;
-            Intelligence = 50;
+            Name = name;
+            Strength = strength;
+            Intelligence = intelligence;
         }
 
         public virtual void Play()
@@ -22,5 +22,6 @@ namespace Bonus_13
             Console.WriteLine($"Strength: {Strength}");
             Console.WriteLine($"Intelligence: {Intelligence}");
         }
+        public abstract void move(int x, int y);
     }
 }
