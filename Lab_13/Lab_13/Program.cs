@@ -7,7 +7,7 @@ namespace Lab_13
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Rock Paper Scissors!");
+            Console.WriteLine("Welcome to Rock Paper Scissors!\n");
 
             var playGame = new RoshamboApp();
             int wins = 0, loss = 0, draw = 0, temp;

@@ -16,11 +16,14 @@ namespace Lab_13
 
             playerChoice.GenerateRoshambo();
 
+            Console.WriteLine($"You picked: {playerChoice.Roshambo}" );
+
             if(playerClass == "1")
             {
                 //var playerRock = new PlayerRock();
+                Console.WriteLine($"AI picked: {Roshambo.Rock}\n");
 
-                if(playerChoice.Roshambo == Roshambo.Rock)
+                if (playerChoice.Roshambo == Roshambo.Rock)
                 {
                     Console.WriteLine("Draw!!!");
                     return 0;
@@ -41,7 +44,7 @@ namespace Lab_13
             else
             {
                 var playerRandom = new PlayerRandom();
-
+                Console.WriteLine($"AI picked: {playerRandom.Roshambo}\n");
                 if (playerChoice.Roshambo == Roshambo.Rock)
                 {
                     if(playerRandom.Roshambo == Roshambo.Rock)
