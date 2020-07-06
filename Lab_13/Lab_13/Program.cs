@@ -13,7 +13,8 @@ namespace Lab_13
             int wins = 0, loss = 0, draw = 0, temp;
 
             var player = new PlayerChoice();
-            
+            player.GetName();
+
             do
             {
                 temp = playGame.PlayGame(player);

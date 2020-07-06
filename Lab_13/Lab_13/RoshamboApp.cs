@@ -16,7 +16,7 @@ namespace Lab_13
 
             playerChoice.GenerateRoshambo();
 
-            Console.WriteLine($"You picked: {playerChoice.Roshambo}" );
+            Console.WriteLine($"{playerChoice.Name} picked: {playerChoice.Roshambo}" );
 
             if(playerClass == "1")
             {
@@ -99,7 +99,7 @@ namespace Lab_13
                         return 1;
                     }
                 }
-                return -1;
+                return -1;//required here because visual studios on mac throws error
             }
 
         }

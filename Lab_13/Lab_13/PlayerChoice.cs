@@ -8,7 +8,7 @@ namespace Lab_13
         {
         }
 
-        private string GetName()
+        public string GetName()
         {
             System.Console.Write("What is your name: ");
             Name = System.Console.ReadLine();
