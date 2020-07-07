@@ -28,10 +28,11 @@ SELECT
     PA.City
 FROM Sales.Customer SC
 JOIN Person.Person PP
-JOIN Person.BusinessEntityAddress AS PB
-  ON SC.PersonID = PP.BusinessEntityID --found in documentation for adventureworks 
+  ON SC.PersonID = PP.BusinessEntityID --found in documentation for adventureworks
+JOIN Person.BusinessEntityAddress PB
+  ON PB.BusinessEntityID = PP.BusinessEntityID
 JOIN Person.Address PA
-  ON PB.AddressID = PA.AdressID
+  ON PB.AddressID = PA.AddressID
 WHERE City IS NOT NULL;
 
 --Q4
@@ -45,7 +46,9 @@ ORDER BY PP.FirstName DESC;
 --Q5
 SELECT
 AVG(Rate) AS AverageSalaryHourly
-FROM HumanResources.EmployeePayHistory;
+FROM HumanResources.Employee HE
+JOIN HumanResources.EmployeePayHistory HP
+  ON HE.BusinessEntityID = HP.BusinessEntityID;
 
 --Q6
 SELECT 
