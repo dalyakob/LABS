@@ -11,5 +11,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="Views\Registration\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 </Project>

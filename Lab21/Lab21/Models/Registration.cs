@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Lab21.Services;
 
 namespace Lab20.Models
 {
@@ -11,5 +13,6 @@ namespace Lab20.Models
         public string Email { get; set; }
         [Required]
         public string Password { get; set; }
+
     }
 }
