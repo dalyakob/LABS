@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model Calculator 
+@{
+    ViewData["Title"] = "Welcome To Our Movie List";
+}
+
+<h1>@ViewData["Title"]</h1>
+<hr />
+
+<h4>Search By Title</h4>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Calculator" asp-action="Result" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Num1" class="control-label">First Number:</label>
+                <input asp-for="Num1" class="form-control" />
+                <span asp-validation-for="Num1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Num2" class="control-label">Second Number:</label>
+                <input asp-for="Num2" class="form-control" />
+                <span asp-validation-for="Num2" class="text-danger"></span>
+                <div class="form-group">
+                    <label asp-for="Operation" class="control-label">Operation:</label>
+                    <select asp-for="Operation" asp-items="Html.GetEnumSelectList<OperationType>()" class="form-control"></select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" value="Calculator" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

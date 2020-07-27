@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -43,18 +43,37 @@ namespace Lab22.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult SearchResultTitle(MoviesModel model)
+        public IActionResult SearchResultTitle(MoviesModel movie)
         {
-            ViewBag.MoviesList = _moviesList;
+            if (!ModelState.IsValid)
+                return View("Index");
 
-            return View(model);
+            var model = new List<MoviesModel>();
+
+            foreach (var item in _moviesList)
+            {
+                if (item.Title.ToLower() == movie.Title.ToLower())
+                {
+                    model.Add(item);
+                }
+            }
+
+            return View("SearchResults", model);
         }
         [HttpPost]
-        public IActionResult SearchResultGenre(MoviesModel model)
-        {
-            ViewBag.MoviesList = _moviesList;
+        public IActionResult SearchResultGenre(MoviesModel movie)
+        { 
 
-            return View(model);
+            var model = new List<MoviesModel>();
+
+            foreach(var item in _moviesList)
+            {
+                if (item.Genre == movie.Genre)
+                {
+                    model.Add(item);
+                }
+            }   
+            return View("SearchResults", model);
         }
     }
 }
