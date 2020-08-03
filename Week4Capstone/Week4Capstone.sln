@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4Capstone", "Week4Capstone\Week4Capstone.csproj", "{AF61BC5F-53F4-4F6F-89BE-D71D8AEB7441}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AF61BC5F-53F4-4F6F-89BE-D71D8AEB7441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF61BC5F-53F4-4F6F-89BE-D71D8AEB7441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF61BC5F-53F4-4F6F-89BE-D71D8AEB7441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF61BC5F-53F4-4F6F-89BE-D71D8AEB7441}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
