@@ -15,9 +15,10 @@ namespace Week4Capstone
             {
                 var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
                 DbInitializer.Initialize(context);
-
-                host.Run();
             }
+
+            host.Run();
+
         }
         public static IHostBuilder CreateHostBuilder(string[] args) =>
                 Host.CreateDefaultBuilder(args)

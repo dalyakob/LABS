@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
 using Week4Capstone.Data;
 using Week4Capstone.Models;
 using Newtonsoft.Json;
@@ -77,14 +74,8 @@ namespace Week4Capstone.Controllers
             List<Product> list = _session.Keys.Any(x => x == "Cart")
             ? JsonConvert.DeserializeObject<List<Product>>(_session.GetString("Cart"))
             : new List<Product>();
-
-            ViewBag.Total = 0.0;
-
-            foreach (var item in list)
-            {
-                ViewBag.Total = list.Sum(i => i.Price);
-            }
-
+            
+            ViewBag.Total = list.Sum(i => i.Price);
 
             return View(list);
         }
