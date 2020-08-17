@@ -1,0 +1,81 @@
+﻿@model Weather
+
+    <style>
+        img {
+            border-radius: 30%;
+            height: 300px;
+            max-width: 100%;
+        }
+
+        .display-4{
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        #header{
+            padding-bottom: 20px;
+        }
+
+    </style>
+
+    <div id="header" class="container-fluid p-3 bg-dark text-white">
+        <div class="display-1">Weather</div>
+    </div>
+    <div class="container-fluid p-3 bg-light">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="display-4">@Model.Currentobservation.Name , @Model.Currentobservation.State</div>
+                <table class="table table-dark">
+                        <tbody>
+                            <tr>
+                                <th scope="row">
+                                    @Html.DisplayNameFor(model => model.Currentobservation.Weather)
+                                </th>
+                                <td>
+                                    @Html.DisplayFor(model => model.Currentobservation.Weather)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    @Html.DisplayNameFor(model => model.Currentobservation.Temp)
+                                </th>
+                                <td>
+                                    @Html.DisplayFor(model => model.Currentobservation.Temp)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    @Html.DisplayNameFor(model => model.Currentobservation.Date)
+                                </th>
+                                <td>
+                                    @Html.DisplayFor(model => model.Currentobservation.Date)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Wind Chill
+                                </th>
+                                <td>
+                                    @Html.DisplayFor(model => model.Currentobservation.WindChill)
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">
+                                    Wind Speed
+                                </th>
+                                <td>
+                                    @Html.DisplayFor(model => model.Currentobservation.Winds)
+                                </td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-4">
+                <img src=@Model.Currentobservation.Weatherimage />
+                <div class="blockquote-footer">
+                    image of current weather from weather.gov
+                </div>
+            </div>
+        </div>
+
+    </div>

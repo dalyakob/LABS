@@ -39,4 +39,4 @@
     </thead>
 </table>
 
-<p class="right">The total of your order is @ViewBag.Total.ToString("C")</p>
+<p class="right">The total of your order is $@String.Format("{0:0.00}", ViewBag.Total)</p>
