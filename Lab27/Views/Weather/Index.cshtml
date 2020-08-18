@@ -1,5 +1,7 @@
 ﻿@model Weather
-
+@{
+    Model.Currentobservation.Weatherimage = Model.Currentobservation.Weatherimage.Insert(0, @"http://forecast.weather.gov/newimages/medium/");
+}
     <style>
         img {
             border-radius: 30%;
@@ -13,6 +15,7 @@
         }
         #header{
             padding-bottom: 20px;
+            text-align: center;
         }
 
     </style>

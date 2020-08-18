@@ -20,7 +20,6 @@ namespace Lab27.Controllers
         public async Task<IActionResult> Index()
         {
             var model = await _weatherService.GetAll();
-            model.Currentobservation.Weatherimage = model.Currentobservation.Weatherimage.Insert(0, @"http://forecast.weather.gov/newimages/medium/");
             return View(model);
         }
     }

@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiphyAPI", "GiphyAPI.csproj", "{47DE5402-7FF2-4106-8E6F-CE149D793439}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47DE5402-7FF2-4106-8E6F-CE149D793439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47DE5402-7FF2-4106-8E6F-CE149D793439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47DE5402-7FF2-4106-8E6F-CE149D793439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47DE5402-7FF2-4106-8E6F-CE149D793439}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
