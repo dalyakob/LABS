@@ -14,6 +14,7 @@
     }
 
     img {
+        border-radius: 30%;
         display: block;
         max-width: 100%;
         height: 200px;
@@ -32,7 +33,7 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </th>
                 <th>
-                    @Html.DisplayFor(modelItem => item.Price)
+                    $@Html.DisplayFor(modelItem => item.Price)
                 </th>
             </tr>
         }

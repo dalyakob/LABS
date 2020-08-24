@@ -25,7 +25,7 @@ namespace GiphyAPI.Services
             //    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
             //    PropertyNameCaseInsensitive = true
             //};
-            var response = await _client.GetFromJsonAsync <Giphy>("search?q=funny%20cat&api_key=dc6zaTOxFJmzC");
+            var response = await _client.GetFromJsonAsync <Giphy>("search?q=funny%people&api_key=dc6zaTOxFJmzC");
             return response;
         }
     }
