@@ -15,5 +15,6 @@ namespace FinalCapstoneProject.Services
         Task Edit(int id, Car car);
 
         Task Delete(int id);
+        Task<IEnumerable<Car>> Search(Car car);
     }
 }

@@ -6,6 +6,7 @@ using FinalCapstoneProject.Models;
 using FinalCapstoneProject.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace FinalCapstoneProject.Controllers
 {
@@ -23,7 +24,21 @@ namespace FinalCapstoneProject.Controllers
             var model = await _service.GetAll();
             return View(model);
         }
+        public ActionResult Search()
+        {
+            return View();
+        }
 
+        public async Task<ActionResult> Results([Bind("Make,Model,Year,Color")] Car car)
+        {
+            if (ModelState.IsValid)
+            {
+                var model = await _service.Search(car);
+                return View(nameof(Index), model);
+            }
+
+            return RedirectToAction(nameof(Search));
+        }
         // GET: CarsController/Details/5
         public async Task<ActionResult> Details(int id)
         {
